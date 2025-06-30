@@ -154,15 +154,15 @@ class ResultAnalysis:
 			dframe = self.dataframes[i]
 			cont = 0
 			for c in dframe.columns:
-				total[cont] = total[cont] + dframe[c].sum()
-				cont = cont + 1
+				total[cont] += dframe[c].sum()
+				cont += 1
 
 		self.results = []
 		self.time_analysis = []
 		# Calculating mean of the configuration and performance analysis
-		for i in range(0, len(total.values()), 2):
-			self.results.append((total[i]+total[i+1])/num_lines/self.n)
-			self.time_analysis.append(total[i+1]/num_lines/self.n)
+		for i in range(0, len(total) - 1, 2):
+			self.results.append((total[i] + total[i+1]) / num_lines / self.n)
+			self.time_analysis.append(total[i+1] / num_lines / self.n)
 
 	# Save the result in a pdf file
 	def save_results_pdf(self, file_name, file_name_img):
