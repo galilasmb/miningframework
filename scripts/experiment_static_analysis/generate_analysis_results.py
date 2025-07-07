@@ -152,8 +152,8 @@ class ReportAnalysis:
         pdf.image("confusion_matrix.jpg", x = None, y = None, w = 160, h = 110, type = 'jpg', link = 'confusion_matrix.jpg')
 
         # Save the pdf with name .pdf
-        pdf.output("output/data/results.pdf")
-        # pdf.output("results.pdf")
+        pdf.output("output/results/results.pdf")
+        #pdf.output("results.pdf")
 
         print("Results in output/data/results.pdf")
 
