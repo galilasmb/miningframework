@@ -32,3 +32,5 @@ time.txt
 resultTime*
 results_*
 execution-*
+.DS_Store
+dependencies/.DS_Store
