@@ -7,16 +7,24 @@ class Arguments {
     private boolean dfInter
     private boolean cfIntra
     private boolean cfInter
-    private boolean oaIntra;
-    private boolean oaInter;
-    private boolean oaIntraPA;
-    private boolean oaInterPA;
+    private boolean cfIntraPA
+    private boolean cfInterPA
+    private boolean oaIntra
+    private boolean oaInter
+    private boolean oaIntraPA
+    private boolean oaInterPA
     private boolean dfpIntra
     private boolean dfpInter
+    private boolean dfpIntraPA
+    private boolean dfpInterPA
     private boolean cd
     private boolean cde
     private boolean pdg
     private boolean pdge
+    private boolean cdPA
+    private boolean cdePA
+    private boolean pdgPA
+    private boolean pdgePA
     private boolean pessimisticDataflow
     private boolean reachability
     private boolean report
@@ -31,20 +39,66 @@ class Arguments {
         dfInter = false
         cfIntra = false
         cfInter = false
+        dfpIntraPA = false
+        dfpInterPA = false
+        cfIntraPA = false
+        cfInterPA = false
         oaIntra = false
         oaInter = false
+        oaIntraPA = false
+        oaInterPA = false
         dfpIntra = false
         dfpInter = false
         cd = false
         cde = false
         pdg = false
         pdge = false
+        cdPA = false
+        cdePA = false
+        pdgPA = false
+        pdgePA = false
         pessimisticDataflow = false
         reachability = false
         report = false
         timeout = 240
         printDepthSVFA = false
         depthLimit = 5
+    }
+
+    void setCfIntraPA(boolean cfIntraPA) {
+        this.cfIntraPA = cfIntraPA
+    }
+
+    void setCfInterPA(boolean cfInterPA) {
+        this.cfInterPA = cfInterPA
+    }
+
+    void setDfpIntraPA(boolean dfpIntraPA) {
+        this.dfpIntraPA = dfpIntraPA
+    }
+
+    void setDfpInterPA(boolean dfpInterPA) {
+        this.dfpInterPA = dfpInterPA
+    }
+
+    boolean getDfpIntraPA() {
+        return dfpIntraPA
+    }
+
+    boolean getCfIntraPA() {
+        return cfIntraPA
+    }
+
+    boolean getCfInterPA() {
+        return cfInterPA
+    }
+
+    boolean getDfpInterPA() {
+        return dfpInterPA
+    }
+
+    boolean getReport() {
+        return report
     }
 
     void setDepthLimit(long depthLimit) {
@@ -189,6 +243,40 @@ class Arguments {
     void setPdge(boolean pdge) {
         this.pdge = pdge
     }
+
+
+    boolean getCdPA() {
+        return cdPA
+    }
+
+    void setCdPA(boolean cdPA) {
+        this.cdPA = cdPA
+    }
+
+    boolean getCdePA() {
+        return cdePA
+    }
+
+    void setCdePA(boolean cdePA) {
+        this.cdePA = cdePA
+    }
+
+    boolean getPdgPA() {
+        return pdgPA
+    }
+
+    void setPdgPA(boolean pdgPA) {
+        this.pdgPA = pdgPA
+    }
+
+    boolean getPdgePA() {
+        return pdgePA
+    }
+
+    void setPdgePA(boolean pdgePA) {
+        this.pdgePA = pdgePA
+    }
+
 
     boolean getPessimisticDataflow() {
         return pessimisticDataflow

@@ -88,6 +88,12 @@ class Main {
         if (appArguments.getCfInter()) {
             detectionAlgorithms.add(new ConflictDetectionAlgorithm("Confluence Inter", "dfp-confluence-interprocedural", sootWrapper, appArguments.getTimeout()))
         }
+        if (appArguments.getCfIntraPA()) {
+            detectionAlgorithms.add(new ConflictDetectionAlgorithm("Confluence Intra", "dfp-confluence-intraprocedural-pa", sootWrapper, appArguments.getTimeout()))
+        }
+        if (appArguments.getCfInterPA()) {
+            detectionAlgorithms.add(new ConflictDetectionAlgorithm("Confluence Inter", "dfp-confluence-interprocedural-pa", sootWrapper, appArguments.getTimeout()))
+        }
         if (appArguments.getOaIntra()) {
             detectionAlgorithms.add(new ConflictDetectionAlgorithm("OA Intra", "overriding-intraprocedural", sootWrapper, appArguments.getTimeout()))
         }
@@ -106,6 +112,12 @@ class Main {
         if (appArguments.getDfpInter()) {
             detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("DFP-Inter", "dfp-inter", sootWrapper, appArguments.getTimeout()))
         }
+        if (appArguments.getDfpIntraPA()) {
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("DFP-Intra", "dfp-intra-pa", sootWrapper, appArguments.getTimeout()))
+        }
+        if (appArguments.getDfpInterPA()) {
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("DFP-Inter", "dfp-inter-pa", sootWrapper, appArguments.getTimeout()))
+        }
         if (appArguments.getCd()) {
             detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("CD", "cd", sootWrapper, appArguments.getTimeout()))
         }
@@ -117,6 +129,18 @@ class Main {
         }
         if (appArguments.getPdge()) {
             detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("PDG-e", "pdg-e", sootWrapper, appArguments.getTimeout()))
+        }
+        if (appArguments.getCdPA()) {
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("CD", "cd-pa", sootWrapper, appArguments.getTimeout()))
+        }
+        if (appArguments.getCdePA()) {
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("CDe", "cd-e-pa", sootWrapper, appArguments.getTimeout()))
+        }
+        if (appArguments.getPdgPA()) {
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("PDG", "pdg-pa", sootWrapper, appArguments.getTimeout()))
+        }
+        if (appArguments.getPdgePA()) {
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("PDG-e", "pdg-e-pa", sootWrapper, appArguments.getTimeout()))
         }
         if (appArguments.getPessimisticDataflow()) {
             detectionAlgorithms.add(new ConflictDetectionAlgorithm("Pessimistic Dataflow", "pessimistic-dataflow", sootWrapper, appArguments.getTimeout()))

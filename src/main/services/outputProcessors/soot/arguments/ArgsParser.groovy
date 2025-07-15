@@ -23,16 +23,24 @@ class ArgsParser {
         this.cli.idf(longOpt: 'svfa-interprocedural',  "Run svfa-interprocedural")
         this.cli.cf(longOpt: 'dfp-confluence-intraprocedural',  "Run dfp-confluence-intraprocedural")
         this.cli.icf(longOpt: 'dfp-confluence-interprocedural',  "Run dfp-confluence-interprocedural")
+        this.cli.cfpa(longOpt: 'dfp-confluence-intraprocedural-pa',  "Run dfp-confluence-intraprocedural with SPARK")
+        this.cli.icfpa(longOpt: 'dfp-confluence-interprocedural-pa',  "Run dfp-confluence-interprocedural with SPARK")
         this.cli.oa(longOpt: 'overriding-intraprocedural',  "Run overriding-intraprocedural")
         this.cli.ioa(longOpt: 'overriding-interprocedural',  "Run overriding-interprocedural")
-        this.cli.oapa(longOpt: 'oa-with-pa',  "Run overriding-intraprocedural with spark")
-        this.cli.ioapa(longOpt: 'ioa-with-pa',  "Run overriding-interprocedural with spark")
+        this.cli.oapa(longOpt: 'oa-with-pa',  "Run overriding-intraprocedural with SPARK")
+        this.cli.ioapa(longOpt: 'ioa-with-pa',  "Run overriding-interprocedural with SPARK")
         this.cli.dfp(longOpt: 'dfp-intra',  "Run dfp-intra")
         this.cli.idfp(longOpt: 'dfp-inter',  "Run dfp-inter")
+        this.cli.dfppa(longOpt: 'dfp-intra-pa',  "Run dfp-intra with SPARK")
+        this.cli.idfppa(longOpt: 'dfp-inter-pa',  "Run dfp-inter with SPARK")
         this.cli.cd(longOpt: 'cd',  "Run cd")
         this.cli.cde(longOpt: 'cde',  "Run cd-e")
         this.cli.pdg(longOpt: 'pdg',  "Run pdg")
         this.cli.pdge(longOpt: 'pdge',  "Run pdg-e")
+        this.cli.cdpa(longOpt: 'cdpa',  "Run cd with SPARK")
+        this.cli.cdepa(longOpt: 'cdepa',  "Run cd-e with SPARK")
+        this.cli.pdgpa(longOpt: 'pdgpa',  "Run pdg with SPARK")
+        this.cli.pdgepa(longOpt: 'pdge',  "Run pdg-e with SPARK")
         this.cli.pd(longOpt: 'pessimistic-dataflow',  "Run pessimistic-dataflow")
         this.cli.report(longOpt: 'report',  "Run report results for experiment using -icf -ioa -idfp -pdg")
         this.cli.r(longOpt: 'reachability',  "Run reachability")
@@ -74,6 +82,12 @@ class ArgsParser {
         if (this.options.icf) {
             args.setCfInter(true)
         }
+        if (this.options.cfpa) {
+            args.setCfIntraPA(true)
+        }
+        if (this.options.icfpa) {
+            args.setCfInterPA(true)
+        }
         if (this.options.oa) {
             args.setOaIntra(true)
         }
@@ -92,6 +106,12 @@ class ArgsParser {
         if (this.options.idfp) {
             args.setDfpInter(true)
         }
+        if (this.options.dfppa) {
+            args.setDfpIntraPA(true)
+        }
+        if (this.options.idfppa) {
+            args.setDfpInterPA(true)
+        }
         if (this.options.cd) {
             args.setCd(true)
         }
@@ -103,6 +123,18 @@ class ArgsParser {
         }
         if (this.options.pdge) {
             args.setPdge(true)
+        }
+        if (this.options.cdpa) {
+            args.setCdPA(true)
+        }
+        if (this.options.cdepa) {
+            args.setCdePA(true)
+        }
+        if (this.options.pdpa) {
+            args.setPdgPA(true)
+        }
+        if (this.options.pdgepa) {
+            args.setPdgePA(true)
         }
         if (this.options.pd) {
             args.setPessimisticDataflow(true)
