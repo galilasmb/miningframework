@@ -50,6 +50,8 @@ Options:
  -idfp,--dfp-inter                       Run dfp-inter
  -ioa,--overriding-interprocedural       Run overriding-interprocedural
  -oa,--overriding-intraprocedural        Run overriding-intraprocedural
+ -ioa-with-pa                            Run overriding-interprocedural with spark
+ -oa                                     Run overriding-intraprocedural with spark
  -pd,--pessimistic-dataflow              Run pessimistic-dataflow
  -pdg,--pdg                              Run pdg
  -pdge,--pdge                            Run pdg-e

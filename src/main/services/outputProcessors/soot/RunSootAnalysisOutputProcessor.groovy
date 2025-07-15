@@ -43,6 +43,8 @@ class RunSootAnalysisOutputProcessor implements OutputProcessor {
                 new ConflictDetectionAlgorithm("Confluence Inter", "dfp-confluence-interprocedural", this.sootWrapper, TIMEOUT),
                 new ConflictDetectionAlgorithm("OA Intra", "overriding-intraprocedural", this.sootWrapper, TIMEOUT),
                 new ConflictDetectionAlgorithm("OA Inter", "overriding-interprocedural", this.sootWrapper, TIMEOUT),
+                new ConflictDetectionAlgorithm("OA Inter Spark", "ioa-with-pa", this.sootWrapper, TIMEOUT),
+                new ConflictDetectionAlgorithm("OA Intra Spark", "oa-with-pa", this.sootWrapper, TIMEOUT),
                 new NonCommutativeConflictDetectionAlgorithm("DFP-Intra", "dfp-intra", this.sootWrapper, TIMEOUT),
                 new NonCommutativeConflictDetectionAlgorithm("DFP-Inter", "dfp-inter", this.sootWrapper, TIMEOUT),
                 new NonCommutativeConflictDetectionAlgorithm("CD", "cd", this.sootWrapper, TIMEOUT),

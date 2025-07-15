@@ -9,6 +9,8 @@ class Arguments {
     private boolean cfInter
     private boolean oaIntra;
     private boolean oaInter;
+    private boolean oaIntraPA;
+    private boolean oaInterPA;
     private boolean dfpIntra
     private boolean dfpInter
     private boolean cd
@@ -116,12 +118,28 @@ class Arguments {
         this.oaIntra = oaIntra
     }
 
+    boolean getOaIntraPA() {
+        return oaIntraPA
+    }
+
+    void setOaIntraPA(boolean oaIntraPA) {
+        this.oaIntraPA = oaIntraPA
+    }
+
     boolean getOaInter() {
         return oaInter
     }
 
     void setOaInter(boolean oaInter) {
         this.oaInter = oaInter
+    }
+
+    boolean getOaInterPA() {
+        return oaInterPA
+    }
+
+    void setOaInterPA(boolean oaInterPA) {
+        this.oaInterPA = oaInterPA
     }
 
     boolean getDfpIntra() {

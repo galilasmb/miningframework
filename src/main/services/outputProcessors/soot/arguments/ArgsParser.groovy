@@ -80,6 +80,12 @@ class ArgsParser {
         if (this.options.ioa) {
             args.setOaInter(true)
         }
+        if (this.options.ioapa) {
+            args.setOaInterPA(true)
+        }
+        if (this.options.oapa) {
+            args.setOaIntraPA(true)
+        }
         if (this.options.dfp) {
             args.setDfpIntra(true)
         }
