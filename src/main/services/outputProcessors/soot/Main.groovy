@@ -131,16 +131,16 @@ class Main {
             detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("PDG-e", "pdg-e", sootWrapper, appArguments.getTimeout()))
         }
         if (appArguments.getCdPA()) {
-            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("CD", "cd-pa", sootWrapper, appArguments.getTimeout()))
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("CD-pa", "cd-pa", sootWrapper, appArguments.getTimeout()))
         }
         if (appArguments.getCdePA()) {
-            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("CDe", "cd-e-pa", sootWrapper, appArguments.getTimeout()))
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("CDe-pa", "cd-e-pa", sootWrapper, appArguments.getTimeout()))
         }
         if (appArguments.getPdgPA()) {
-            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("PDG", "pdg-pa", sootWrapper, appArguments.getTimeout()))
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("PDG-pa", "pdg-pa", sootWrapper, appArguments.getTimeout()))
         }
         if (appArguments.getPdgePA()) {
-            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("PDG-e", "pdg-e-pa", sootWrapper, appArguments.getTimeout()))
+            detectionAlgorithms.add(new NonCommutativeConflictDetectionAlgorithm("PDG-e-pa", "pdg-e-pa", sootWrapper, appArguments.getTimeout()))
         }
         if (appArguments.getPessimisticDataflow()) {
             detectionAlgorithms.add(new ConflictDetectionAlgorithm("Pessimistic Dataflow", "pessimistic-dataflow", sootWrapper, appArguments.getTimeout()))
