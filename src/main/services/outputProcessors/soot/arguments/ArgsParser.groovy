@@ -25,6 +25,8 @@ class ArgsParser {
         this.cli.icf(longOpt: 'dfp-confluence-interprocedural',  "Run dfp-confluence-interprocedural")
         this.cli.oa(longOpt: 'overriding-intraprocedural',  "Run overriding-intraprocedural")
         this.cli.ioa(longOpt: 'overriding-interprocedural',  "Run overriding-interprocedural")
+        this.cli.oapa(longOpt: 'oa-with-pa',  "Run overriding-intraprocedural with spark")
+        this.cli.ioapa(longOpt: 'ioa-with-pa',  "Run overriding-interprocedural with spark")
         this.cli.dfp(longOpt: 'dfp-intra',  "Run dfp-intra")
         this.cli.idfp(longOpt: 'dfp-inter',  "Run dfp-inter")
         this.cli.cd(longOpt: 'cd',  "Run cd")
