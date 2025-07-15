@@ -130,7 +130,7 @@ class ArgsParser {
         if (this.options.cdepa) {
             args.setCdePA(true)
         }
-        if (this.options.pdpa) {
+        if (this.options.pdgpa) {
             args.setPdgPA(true)
         }
         if (this.options.pdgepa) {
